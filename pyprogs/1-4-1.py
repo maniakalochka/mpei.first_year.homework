@@ -1,4 +1,3 @@
-import numpy as np
 import math
 i = 0
 a = list(map(int, input('Введите массив A через пробел: ').split()))
@@ -12,12 +11,12 @@ per = 0
 t = 1
 area = 0
 for i in range(n):
-        if ((len(a) > 3) or (len(b) > 3) or (len(c) > 3)):
-            print('Один или несколько массивов не удовлетворяют условию!')
-            break
-        else:
-            per = a[i] + b[i] + c[i]
-            t = per * (2 ** 0.5)
-            area = (t * (t - a[i]) * (t - b[i]) * (t - c[i])) ** 0.5
-            print('Периметр = ', per)
-            print('Площадь = ', area)
+    if ((len(a) > 3) or (len(b) > 3) or (len(c) > 3)):
+        print('Один или несколько массивов не удовлетворяют условию!')
+        break
+    else:
+        per = a[i] + b[i] + c[i]
+        t = per * (2 ** 0.5)
+        area = (t * (t - a[i]) * (t - b[i]) * (t - c[i])) ** 0.5
+        print('Периметр = ', per)
+        print('Площадь = ', area)
