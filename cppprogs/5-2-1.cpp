@@ -10,7 +10,7 @@ struct stud{
 int main()
 {
     stud student[100];
-    int i, i2, i_3, n, k = 0, k2, k3, count, st_kol;
+    int i, i2, i_3, n, k = 0, k2 = 0, k3 = 0, count, st_kol;
     int ph_ev_numb, inf_ev_numb, math_ev_numb;
     int *pk, *pk2, *pk3;
     cout << "Сколько студентов?: ";
@@ -27,7 +27,7 @@ int main()
         cin >> student[i].birth_year;
         cout << "\nФИО студента: ";
         cin >> student[i].fio;
-        cout << "Пол студента: (m or f)";
+        cout << "Пол студента: (m or f) ";
         cin >> student[i].gender;
         if (student[i].gender == "m")
         {
