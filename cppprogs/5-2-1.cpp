@@ -25,7 +25,7 @@ int main()
         cin >> student[i].stipendia;
         cout << "\nВведите год рождения студента: ";
         cin >> student[i].birth_year;
-        cout << "\nФИО студента: ";
+        cout << "\nФамилия студента: ";
         cin >> student[i].fio;
         cout << "Пол студента: (m or f) ";
         cin >> student[i].gender;
