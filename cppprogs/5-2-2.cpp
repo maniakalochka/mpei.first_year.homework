@@ -1,11 +1,10 @@
 #include <iostream>
 #include <string>
-#include <ctime>
 using namespace std;
 
 struct stud_ved{
-    int group, date, exam_time, audience_numb;
-    string discipline, teacher_surname;
+    int group, date, audience_numb;
+    string discipline, teacher_surname, exam_time;
 };
 
 int main()

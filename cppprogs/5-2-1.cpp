@@ -13,6 +13,7 @@ int main()
     int i, i2, i_3, n, k = 0, k2 = 0, k3 = 0, count, st_kol;
     int ph_ev_numb, inf_ev_numb, math_ev_numb;
     int *pk, *pk2, *pk3;
+
     cout << "Сколько студентов?: ";
     cin >> st_kol;
     for (i = 0; i < st_kol; i++)
