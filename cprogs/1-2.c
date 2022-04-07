@@ -7,7 +7,6 @@ int main()
     int i, n, n2;
     printf("Введите границы отрезка A--B: ");
     scanf("%f %f", &a, &b);
-    //printf("%f %f", a, b);
     printf("Введите количество вычислений: ");
     scanf("%d", &n);
     n2 = 1;
