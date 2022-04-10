@@ -5,7 +5,7 @@ int main()
 {
     float a, b, h, x, y, rec;
     int i, n, n2;
-    printf("Введите границы отрезка A--B: ");
+    printf("Введите границы отрезка A-B: ");
     scanf("%f %f", &a, &b);
     printf("Введите количество вычислений: ");
     scanf("%d", &n);

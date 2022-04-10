@@ -33,7 +33,7 @@ int main()
     cin >> surname;
     for (i = 0; i < n; i++){
         if (professor[i].teacher_surname == surname){
-            cout << "Преподаватель "<< surname << " занят в следующий(-ие) дни: "<< professor[i].date;
+            cout << "Преподаватель "<< surname << " занят в следующий(-ие) дни: "<< professor[i].date << endl;
         }
     }
 

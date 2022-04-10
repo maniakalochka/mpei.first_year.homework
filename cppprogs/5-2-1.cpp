@@ -1,37 +1,36 @@
 #include <iostream>
 #include <string>
+#include <clocale>
 using namespace std;
 
 struct stud{
-    int group, birth_year, phys_eval[10], math_eval[10], inf_eval[10], stipendia;
+    int group, birth_year, phys_eval[10], math_eval[10], inf_eval[10], stipendia = 0;
     string fio, gender;
 };
 
 int main()
 {
     stud student[100];
-    int i, i2, i_3, n, k = 0, k2 = 0, k3 = 0, count, st_kol;
-    int ph_ev_numb, inf_ev_numb, math_ev_numb;
+    int i, i2, k = 0, k2 = 0, k3 = 0, count = 0, st_kol = 0;
+    int ph_ev_numb = 0, inf_ev_numb = 0, math_ev_numb = 0;
     int *pk, *pk2, *pk3;
 
     cout << "Сколько студентов?: ";
     cin >> st_kol;
-    for (i = 0; i < st_kol; i++)
-    {
+    for (i = 0; i < st_kol; i++){
         cout << "______________________________" << endl;
-        cout << "Введите сведения о " << i << " студенте: '" << endl;
+        cout << "Введите сведения о " << i + 1 << " студенте: '" << endl;
         cout << "Введите группу студента: ";
         cin >> student[i].group;
-        cout << "\nСтипендия студента составляет?: ";
+        cout << "Стипендия студента составляет?: ";
         cin >> student[i].stipendia;
-        cout << "\nВведите год рождения студента: ";
+        cout << "Введите год рождения студента: ";
         cin >> student[i].birth_year;
-        cout << "\nФамилия студента: ";
+        cout << "Фамилия студента: ";
         cin >> student[i].fio;
         cout << "Пол студента: (m or f) ";
         cin >> student[i].gender;
-        if (student[i].gender == "m")
-        {
+        if (student[i].gender == "m"){
             cout << "Сколько оценок по физике? ";
             cin >> ph_ev_numb;
             cout << "Введите эти оценки: ";
@@ -42,7 +41,6 @@ int main()
                 }
             }
 
-
             cout << "Сколько оценок по математике? ";
             cin >> math_ev_numb;
             cout << "Введите эти оценки: ";
@@ -52,7 +50,6 @@ int main()
                     k2++;
                 }
             }
-
 
             cout << "Сколько оценок по информатике? ";
             cin >> inf_ev_numb;
@@ -67,12 +64,11 @@ int main()
             pk2 = &k2;
             pk3 = &k3;
             count = *pk + *pk2 + *pk3;
-            if (count >= 2){
-                cout << student[i].fio << endl;
-            }
-            else {
+            if (count < 2){
                 cout << "Студент сдал либо с одной 2, либо без 2!" << endl;
-
+            }
+            else{
+                cout << student[i].fio << endl;
             }
         }
     }

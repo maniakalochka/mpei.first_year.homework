@@ -3,7 +3,7 @@ using namespace std;
 
 int scan_arr(int* a){
     for(int i = 0; i < 10; i++){
-        cout << "a[" << i << "] = ";
+        cout << "arr_elem[" << i + 1 << "] = ";
         cin >> a[i];
     }
 }
