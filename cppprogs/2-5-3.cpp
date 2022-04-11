@@ -23,18 +23,6 @@ int main()
     cout << "Введите массив p: " << endl;
     scan_arr(p);
 
-
-    cout << "Ваш массив с: "<< endl;
-    for (i = 0; i < 10; i++){
-        cout << c[i] << " "<< endl;
-    }
-
-
-    cout << "Ваш массив p: "<< endl;
-    for (i = 0; i < 10; i++){
-        cout << p[i] << " "<< endl;
-    }
-
     for (i = 0; i < 10; i++){
         if (c[i] == p[i])
             b = true;

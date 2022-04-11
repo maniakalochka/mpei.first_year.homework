@@ -21,6 +21,17 @@ using namespace std;
         return func;
     }
 
+    float sred_aryth_without_abs(float a[10][10], int *pn, int *pm){
+        float s = 0, func_without_abs = 0, proiz = 0;
+        for(int i = 0; i < *pn; i++){
+            for(int j = 0; j < *pm; j++){
+                s += a[i][j];
+                func_without_abs = s / (*pm * *pn);
+            }
+        }
+        return func_without_abs;
+    }
+
 int main()
 {
     float matrix[10][10], s = 0;
@@ -60,8 +71,12 @@ int main()
     else{
         cout << "Матрица удовлетворяет условию" << endl;
     }
-
+    cout << "Среднее арифмитическое, не меняя на модуль: ";
+    cout << sred_aryth_without_abs(matrix, &n, &m) << endl;
+    cout << "Среднее арифмитическое с заменой чисел на модуль:";
     cout << sred_aryth(matrix, &n, &m) << endl;
+
+
     cin.sync();
     cin.get();
     return 0;

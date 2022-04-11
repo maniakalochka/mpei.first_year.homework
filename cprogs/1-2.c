@@ -1,37 +1,22 @@
-#include <stdio.h>
-#include <math.h>
-
-int main()
-{
-    float a, b, h, x, y, rec;
-    int i, n, n2;
-    printf("Введите границы отрезка A-B: ");
-    scanf("%f %f", &a, &b);
-    printf("Введите количество вычислений: ");
-    scanf("%d", &n);
-    n2 = 1;
-    if ((b < a) || (n < 1)){
-        printf("Некорректные данные");
-    }
-    else {
-        h = (b - a)/(n - 1);
-        x = a;
-        for (i = 0; i <= n; i+=1){
-            if (n2 >= 11){
-                break;
-            }
-            rec = pow(x, 0.8) + pow(x, (4 - x)/5);
-            y = pow(rec, 0.5) + log(fabs(x - 20.5));
-            printf("x %f: ", x);
-            printf("\ny %f: ", y);
-            printf("\nn %d: ", n2);
-            n2 += 1;
-            printf("__________________\n");
-            x += h;
-
-        }
-    }
-
-    system("PAUSE");
-    return 0;
-}
+import math
+i = 0
+a = list(map(int, input('Введите массив A через пробел: ').split()))
+print('Массив а: ', a)
+b = list(map(int, input('Введите массив B через пробел: ').split()))
+print('Массив b: ', b)
+c = list(map(int, input('Введите массив C через пробел: ').split()))
+print('Массив c: ', c)
+n = len(a)
+per = 0
+t = 1
+area = 0
+for i in range(n):
+    if ((len(a) > 3) or (len(b) > 3) or (len(c) > 3)):
+        print('Один или несколько массивов не удовлетворяют условию!')
+        break
+    else:
+        per = a[i] + b[i] + c[i]
+        t = per * (2 ** 0.5)
+        area = (t * (t - a[i]) * (t - b[i]) * (t - c[i])) ** 0.5
+        print('Периметр = ', per)
+        print('Площадь = ', area)
